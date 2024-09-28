@@ -1,0 +1,117 @@
+body {
+    font-family: 'Roboto', sans-serif; /* Google Font */
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-image: linear-gradient(to bottom right, #4facfe, #00f2fe);
+    background-size: cover;
+    background-position: center; /* Center the background image */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.text {
+    background-color: rgba(0, 0, 0, 0.8); /* Darker for better contrast */
+    color: rgb(138, 138, 134);
+    padding: 20px; /* Increased padding for comfort */
+    height: 40%;
+    font-size: 4vh;
+    overflow-y: auto;
+    user-select: none;
+    border-radius: 10px; /* Rounded corners for a smoother look */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7); /* Added shadow for depth */
+    width: 63%;
+}
+.typing-board{
+    height: 50%;
+    user-select: none;
+    width: 63%;
+}
+.bar {
+    background-color: yellow; /* Changed to a more vibrant green */
+    height: 7%; /* Slightly increased height for visibility */
+    width: 0; /* Start at 0 width */
+    transition: width 0.1s linear;
+    margin-bottom: 5px;
+    align-self: flex-start;
+}
+
+.timer {
+    font-size: 3vh; /* Slightly larger for better readability */
+    margin: 2px 0;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+    padding: 10px; /* Added padding for better spacing */
+    border-radius: 5px; /* Rounded corners */
+    text-align: center; /* Center the text */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+}
+
+.results {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(68, 68, 68, 0.9); /* Semi-transparent background */
+    color: white;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    width: 25%;
+    height: 20%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* More pronounced shadow */
+}
+
+.results p {
+    margin: 20px 0;
+    font-size: 2.5vh;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Adding shadow for text for better readability */
+}
+
+#restart-button {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 2.5vh;
+    width: 100%; /* Full width button */
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transitions */
+}
+
+#restart-button:hover {
+    background-color: #218838;
+    transform: scale(1.05); /* Slightly increase button size on hover */
+}
+
+textarea {
+    background-color: rgba(0, 0, 0, 0.9); /* Darker background */
+    color: rgb(254, 229, 0);
+    font-size: 4vh;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    border: none; /* Remove border */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); /* Added shadow for depth */
+}
+
+.correct-letter {
+    color: rgb(43, 207, 43);
+}
+
+.wrong-letter {
+    color: red;
+    text-decoration: underline; /* Underline wrong letters for emphasis */
+}
+
+.wrong-space {
+    background-color: red;
+}
